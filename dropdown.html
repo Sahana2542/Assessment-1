@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunc()
+        {
+            var name=document.getElementById("mylist")
+            mobilename=["redmi","moto","samsung"];
+            for(const i in mobilename)
+            {
+                if(name[i]==mobilename)
+              {
+                  document.getElementById("id").join(mobilename)
+              }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div >
+        <center>
+            
+   
+    <select id="mylist" onchange="myfunc()">
+    <selected ="" value="default"<------->
+    <option value="laptop">Laptop</option>
+    <option value="mobile">Mobile</option>
+    
+    </center>
+        </div>
+        <div span ="id" onchange="myfunc()">
+        </div>
+</body>
+</html>

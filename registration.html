@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm(){
+        var names=["raj","tom","raj"];  
+	username = document.myform.uname.value;
+	password = document.myform.pass.value;
+    number = document.myform.no.value;
+    email=document.myform.email.value;
+    var pass=  ("^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#$%^&*])(.{8,})");
+    
+	if(username ==""||username.length<5||username.length>15)
+    {
+		alert("enter your name");
+        document.myform.uname.value="";
+		document.myform.uname.focus();   
+	}
+     else if (password ==""||(!(password.match(pass))))
+    
+     {
+		alert("password should contain Alphanumeric values with special character");
+		document.myform.pass.value="";
+		document.myform.pass.focus();
+	}
+        else if (email ==""){
+		alert("enter valid  email-id");
+		document.myform.email.value="";
+		document.myform.email.focus();
+    }
+    else if (number ==""|| number.length>10){
+		alert("enter valid number");
+		document.myform.number.value="";
+		document.myform.number.focus();
+    }
+    else{
+        for (i=0;i<names.length;i++)
+        { 
+            if(username == names[i]) 
+            {
+                alert("Welcome "+username);
+                document.myform.value();
+            }
+        }
+	
+		document.getElementById("myid").innerHTML="Registered Successfully";
+       
+	}   
+}
+
+    </script>
+</head>
+<body>
+    <form action=""  name="myform" id="myid">
+     Name<input type="text" name="uname"  >
+     Password <input type="password" name="pass" >
+     Email-ID <input type="email" name="email" >
+     Phone number <input type="number"  name="no" >
+     <input type="button" value="Submit " onclick="validateForm()" >
+           
+    </form>
+</body>
+</html>
