@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dropdown</title>
     <script>
-        function myfunc()
-        {
-            var name=document.getElementById("mylist")
-            mobilename=["redmi","moto","samsung"];
-            for(const i in mobilename)
+        function access(){
+            var name = document.getElementById("myList").value;
+            if(name == "laptop")
             {
-                if(name[i]==mobilename)
-              {
-                  document.getElementById("id").join(mobilename)
-              }
+                var acc = ['Sony','Lenovo','Dell'];
+                document.getElementById("disp").innerHTML = acc.join("<br>");
             }
+            else if(name == "mobile")
+            {
+                var acc = ['oneplus','Samsung','Vivo'];
+                document.getElementById("disp").innerHTML = acc.join("<br>");
+            }
+            else if(name == "tv")
+            {
+                var acc = ['Sony','Sumsung','Panasonic'];
+                document.getElementById("disp").innerHTML = acc.join("<br>");
+            } 
         }
     </script>
 </head>
 <body>
-    <div >
-        <center>
-            
-   
-    <select id="mylist" onchange="myfunc()">
-    <selected ="" value="default"<------->
-    <option value="laptop">Laptop</option>
-    <option value="mobile">Mobile</option>
-    
-    </center>
-        </div>
-        <div span ="id" onchange="myfunc()">
-        </div>
+<div>
+    <select name="list" id="myList" onchange="access()">
+        <option selected="" value="Default">--Select--</option>
+        <option value="laptop">Laptop</option>
+        <option value="mobile">Mobile</option>
+        <option value="tv">TV</option>
+    </select>  
+</div>
+<br>
+<div  > <span id="disp"></span></div>
 </body>
 </html>
