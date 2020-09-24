@@ -1,0 +1,26 @@
+[{
+    "name":"Shanti Sagar",
+    "city":"mysuru",
+    "type":"veg",
+    "cuisine":["indian","chinese"]
+},{
+    "name":"Paivista",
+    "city":"Bangalore",
+    "type":"veg",
+    "cuisine":["indian","chinese"]
+},{
+    "name":"Woodland",
+    "city":"banglore",
+    "type":"nonveg",
+    "cuisine":["indian"]
+},{
+    "name":"Hut",
+    "city":"Tumkur",
+    "type":"nonveg",
+    "cuisine":["indian","chinese"]
+},{
+    "name":"Ruchidi Prince",
+    "city":"manglore",
+    "type":"veg",
+    "cuisine":["indian","chinese"]
+}]

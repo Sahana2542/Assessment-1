@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ajaxFunction(){
+            ajaxRequest = new XMLHttpRequest();   // opera ,mozilla
+            // target = document.getElementById("userid"); 
+            var url = "http://localhost:3000/showbooks"; 
+            ajaxRequest.open("GET", url, true); 
+            ajaxRequest.send(null); 
+            ajaxRequest.onreadystatechange = processRequest;
+          }
+     function processRequest() {
+      if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) { 
+          document.getElementById("myid").innerHTML=ajaxRequest.responseText;
+      }
+     }
+     
+    
+        </script>
+</head>
+<body>
+    <a href="http://localhost:3000/showhotel">Show Hotel</a>
+    <form action="http://localhost:3000/showcity">
+        view city<input type="text" name="city">
+        <input type="submit">
+    </form>
+    <form action="http://localhost:3000/showtype" method="GET">
+        Hotel type <select name="type" id="hotelType">
+            <option selected="" value="Default">--Select--</option>
+            <option name='veg' id = 'veg'>veg</option>
+            <option name='nonveg' id = 'nonveg'>nonveg</option>
+        </select>
+        <input type="submit">
+    </form>
+    <form action="http://localhost:3000/showcuisine">
+        <select  name="cuisine" >
+            <option selected="" value="default">--select--</option>
+            <option value="indian">indian</option>
+            <option value="chinese">chinese</option>
+            <option value="korean">korean</option>
+            <input type="submit" value="search">
+            </select>
+    </form>
+</body>
+</html>
